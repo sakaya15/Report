@@ -1,7 +1,7 @@
 # Report
 
-### ラビットチャレンジのレポートです.
+ラビットチャレンジのレポートです.
 
-### markdownを用いて作成しています.
+markdownを用いて作成しています.
 
-### ご覧になる方は、VScodeのmarkdown　mathを導入して下さい.
+ご覧になる方は、VScodeのmarkdown　mathを導入して下さい.
