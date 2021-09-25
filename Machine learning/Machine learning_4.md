@@ -25,3 +25,15 @@ Var(\bm{s}_{j})=\frac{1}{n}\bm{s}_{j}^{T}\bm{s}_{j}=\frac{1}{n}(\bar{X}\bm{a}_{j
 $$
 
 # 主成分分析（実装）
+### googledriveマウントとインポート
+![1](images_Machinelearning_4/1.png)
+### データ読み込み
+![2](images_Machinelearning_4/2.png)
+### 不要なデータを削除
+![3](images_Machinelearning_4/3.png)
+### ロジスティック回帰モデルで検証
+![4](images_Machinelearning_4/4.png)
+### 30次元の際の主成分分析
+![5](images_Machinelearning_4/5.png)
+### 30次元を2次元まで圧縮した場合
+![6](images_Machinelearning_4/6.png)
