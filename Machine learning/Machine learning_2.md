@@ -66,8 +66,31 @@ $$
 * ホールドアウト法
 * クロスバリデーション(交差検証)
 
-
-## Tips
-
-
 # 非線形回帰（実装）
+### 1.Googleドライブのマウント
+任意のgoogleアカウントでログインし、認証コードを入力して実行を行う.
+
+![1](images_Machinelearning_2/1.png)
+
+### 2.モジュールインポート
+![2](images_Machinelearning_2/2.png)
+
+### 3.ある関数からデータを作成
+![3](images_Machinelearning_2/3.png)
+
+### 4.線形回帰
+![4](images_Machinelearning_2/4.png)
+### 5.カーネル回帰にリッジ推定量を適用したモデル(scikit-learnのKernelRidge有り)
+![5](images_Machinelearning_2/5.png)
+### 6.カーネル回帰にリッジ推定量を適用したモデル(scikit-learnのKernelRidge無し)
+![6](images_Machinelearning_2/6.png)
+### 7.多項式を基底関数とした非線形回帰
+![7](images_Machinelearning_2/7.png)
+### 8.カーネル回帰にラッソ推定量を適用したモデル
+![8](images_Machinelearning_2/8.png)
+### 9.サポートベクターマシン
+![9](images_Machinelearning_2/9.png)
+### 10.kerasを用いた深層学習
+![10](images_Machinelearning_2/10.png)
+![11](images_Machinelearning_2/11.png)
+![12](images_Machinelearning_2/12.png)

@@ -100,3 +100,13 @@ $$
 \frac{2\cdot再現率\cdot適合率}{再現率\cdot 適合率}
 $$
 # ロジスティック回帰（実装）
+
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
+![1](images_Machinelearning_2/1.png)
