@@ -32,6 +32,10 @@ $$
 ### 不要なデータを削除
 ![3](images_Machinelearning_4/3.png)
 ### ロジスティック回帰モデルで検証
+logistic = LogisticRegressionCV(cv=10, random_state=0,max_iter=1000)
+
+最大反復回数max_iter=1000の指定が必要だった.
+
 ![4](images_Machinelearning_4/4.png)
 ### 30次元の際の主成分分析
 ![5](images_Machinelearning_4/5.png)

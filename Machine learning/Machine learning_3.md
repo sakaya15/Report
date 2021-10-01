@@ -100,13 +100,21 @@ $$
 \frac{2\cdot再現率\cdot適合率}{再現率\cdot 適合率}
 $$
 # ロジスティック回帰（実装）
+### googledriveマウントとインポート
+![2](images_Machinelearning_3/2.png)
+### データ読み込み
+![3](images_Machinelearning_3/3.png)
+### 不要なデータ削除・補完
+![4](images_Machinelearning_3/4.png)
+### 1変数(チケット価格)によるロジスティック回帰
+![5](images_Machinelearning_3/5.png)
+### 切片と回帰係数確認
+![6](images_Machinelearning_3/6.png)
+![1](images_Machinelearning_3/1.png)
+![1](images_Machinelearning_3/1.png)
+![1](images_Machinelearning_3/1.png)
+![1](images_Machinelearning_3/1.png)
+![1](images_Machinelearning_3/1.png)
+![1](images_Machinelearning_3/1.png)
+![1](images_Machinelearning_3/1.png)
 
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
-![1](images_Machinelearning_2/1.png)
