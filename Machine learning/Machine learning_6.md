@@ -156,3 +156,57 @@ $$
 線形分離が上手くいかない際に、より高次元に写像する必要が出てくる.しかし、そのままでは計算量が膨大になってしまう.直接計算することなく、カーネル関数を用いて高次元ベクトルの内積を見積もる方法をカーネルトリックという.
 
 # サポートベクターマシーン（実装）
+
+
+モジュールインポート
+
+![1](images_Machinelearning_6/1.png)
+
+## 線形分離可能の場合
+### データ生成
+![1](images_Machinelearning_6/2.png)
+### データ可視化
+![1](images_Machinelearning_6/3.png)
+### SVM学習
+![1](images_Machinelearning_6/4.png)
+### SVM予測
+
+#### 変数指定
+![1](images_Machinelearning_6/5.png)
+#### 予測
+![1](images_Machinelearning_6/6.png)
+#### 予測結果可視化
+![1](images_Machinelearning_6/7.png)
+## 線形分離不可能の場合
+### データ生成
+![1](images_Machinelearning_6/8.png)
+### データ可視化
+![1](images_Machinelearning_6/9.png)
+
+### カーネルを用いた学習
+![1](images_Machinelearning_6/10.png)
+
+### 予測
+
+#### 変数指定
+![1](images_Machinelearning_6/11.png)
+
+#### 予測
+
+![1](images_Machinelearning_6/12.png)
+#### 予測結果可視化
+![1](images_Machinelearning_6/13.png)
+## ソフトマージンSVM
+### 重なり合いデータ生成
+![1](images_Machinelearning_6/14.png)
+### データ可視化
+![1](images_Machinelearning_6/15.png)
+### 学習
+![1](images_Machinelearning_6/16.png)
+### 予測
+#### 変数指定
+![1](images_Machinelearning_6/17.png)
+#### 予測
+![1](images_Machinelearning_6/18.png)
+#### 予測結果可視化
+![1](images_Machinelearning_6/19.png)
