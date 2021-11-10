@@ -63,27 +63,27 @@ Seq2seqとは?
 
 # 4-2.AlphaGo
 AlphaGoの学習は以下のステップで行われる
-１. 教師あり学習によるRollOutPolicyとPolicyNetの学習
-２. 強化学習によるPolicyNetの学習
-３. 強化学習によるValueNetの学習
+1. 教師あり学習によるRollOutPolicyとPolicyNetの学習
+2. 強化学習によるPolicyNetの学習
+3. 強化学習によるValueNetの学習
 
 ## PolicyNetの教師あり学習
-KGSの棋譜データから3000万局面分の訓練データを用意し、学習を行った。
-具体的には、対局者が着手した手を1、残りを0とした19×19次元の配列を訓練データとし、それを分類問題として学習した。
-この学習で作成したPolicyNetは57%ほどの精度である。
+KGSの棋譜データから3000万局面分の訓練データを用意し、学習を行った.
+具体的には、対局者が着手した手を1、残りを0とした19×19次元の配列を訓練データとし、それを分類問題として学習した.
+この学習で作成したPolicyNetは57%ほどの精度である.
 
 ## PolicyNetの強化学習
-現状のPolicyNetとPolicyPoolからランダムに選択されたPolicyNetと対局シミュレーションを行い、その結果を用いて方策勾配法で学習を行った。
-PolicyPoolとは、PolicyNetの強化学習の過程を500Iteraionごとに記録し保存したものである。
+現状のPolicyNetとPolicyPoolからランダムに選択されたPolicyNetと対局シミュレーションを行い、その結果を用いて方策勾配法で学習を行った.
+PolicyPoolとは、PolicyNetの強化学習の過程を500Iteraionごとに記録し保存したものである.
 現状のPolicyNet同士の対局ではなく、PolicyPoolに保存されているものとの対局を使用する理由は、過学習を防ぐ為.
-この学習をminibatch size 128で1万回行った。
+この学習をminibatch size 128で1万回行った.
 
 ## AlphaGoとAlphaGoZeroの違い
-・教師あり学習を一切行わず、強化学習のみで作成した
-・特徴入力を石の配置のみにした
-・PolicyNetとValueNetを１つのネットワークに統合した→デュアルネットワーク
-・Residual Netを導入した
-・モンテカルロ木探索からRollOutをなくした
+* 教師あり学習を一切行わず、強化学習のみで作成した
+* 特徴入力を石の配置のみにした
+* PolicyNetとValueNetを１つのネットワークに統合した→デュアルネットワーク
+* Residual Netを導入した
+* モンテカルロ木探索からRollOutをなくした
 
 # 4-3.軽量化・高速化技術
 ・分散深層学習とは?
