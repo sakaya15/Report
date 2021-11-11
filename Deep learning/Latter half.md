@@ -115,21 +115,24 @@ CPUと違って、並列計算（特定の処理をいくつかの独立した�
 # 4-4.応用モデル
 
 ## MobileNet
-* AlexNet以降、より深く・より複雑なCNNを構築することで精度を改善して来たが、計算量が増えることでコストがかかるデメリットがある.
+* AlexNet以降、より深く・より複雑なCNNを構築することで精度を改善して来たが、計算量が増えることでコストがかかるデメリットがある
 * MobileNetは、軽量で高速なCNN
 * MobileNetはDepthwise ConvolutionとPointwise Convolutionの組み合わせで軽量化を実現
 
 
 ## DenseNet
-* DenseNet(Dense Convolutional Network）は、CNNの一種.ResNetを改良したもの.
+* DenseNet(Dense Convolutional Network）は、CNNの一種.ResNetを改良したもの
 
-* 全ての特徴量サイズが同じレイヤーを結合させて、スキップ接続を用いたもの.
+* 全ての特徴量サイズが同じレイヤーを結合させて、スキップ接続を用いたもの
 
 # 4-5.Transformer
-・TransformerはRNNやCNNを使用せず、Attentionのみを用いるSeq2Seqモデルです。
-・並列計算が可能なためRNNに比べて計算が高速な上、Self-Attentionと呼ばれる機構を用いることにより、局所的な位置しか参照できないCNNと異なり、系列内の任意の位置の情報を参照することを可能にしています。
-・その他にもいくつかの工夫が加えられており、翻訳に限らない自然言語処理のあらゆるタスクで圧倒的な性能を示すことが知られています。
-・TransformerのモデルもEncoder-Decoderモデルの構造になっています。 EncoderとDecoderはPositional Encoding: 入出力の単語のEmbedding時に単語の位置情報を埋め込む、Scaled Dot-Product Attention: 内積でAttentionを計算し、スケーリングを行う、Multi-head Attention: Scaled Dot-Product Attentionを複数のヘッドで並列化する、Position-Wise Feed Forward Network: 単語列の位置ごとに独立して処理を行う など、いくつかのモジュールから構成されているため、それぞれのモジュールを個別に定義していきます。
+* TransformerはRNNやCNNを使用せず、Attentionのみを用いるSeq2Seqモデル
+
+* 主に自然言語処理 （NLP）の分野で使用される
+
+* 時系列データを逐次処理する必要がない為、並列化が可能になり、訓練時間が短縮される
+
+
 
 # 4-6.物体検知・セグメンテーション
 
