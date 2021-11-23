@@ -84,19 +84,52 @@ LSTMの改良版.LSTMはパラメータが多く、計算負荷が高くなる�
 ![1](images_Deeplearning_Latter/3_5_1.png)  
 
 RNNを用いたEncoder-Decoderモデルの1つ.機械対話や機械翻訳等で用いられている.
+
+![1](images_Deeplearning_Latter/3_5_2.png)  
+
+1
+
 ## Encoder RNN
+![1](images_Deeplearning_Latter/3_5_3.png) 
+
+* ユーザーがインプットしたテキストデータを、単語等のトークンに区切って渡す構造.
+* Taking :文章を単語等のトークン毎に分割し、トークンごとのIDに分割する.
+* Embedding :IDから、そのトークンを表す分散表現ベクトルに変換.
+* Encoder RNN:ベクトルを順番にRNNに入力していく.
+### 処理手順
+* vec1をRNNに入力し、hidden stateを出力。このhiddenstateと次の入力vec2をまたRNNに入力してきたhidden stateを出力という流れを繰り返す.
+* 最後のvecを入れたときのhiddenstateをfinalstateとしてとっておく.このfinalstateがthoughtvectorと呼ばれ、入力した文の意味を表すベクトルとなる. 
 
 ### 具体例(１万単語の場合)
-![1](images_Deeplearning_Latter/3_5_2.png) 
+![1](images_Deeplearning_Latter/3_5_4.png) 
 
 ## Decoder RNN
+![1](images_Deeplearning_Latter/3_5_5.png) 
+* システムがアウトプットデータを、単語等のトークンごとに生成する構造.
+### 処理手順
+1. Decoder RNN: Encoder RNN のfinal state (thought vector) から、各token の生成確率を出力していく.final state をDecoder RNN のinitial state ととして設定し、Embedding を入力.
 
+2. Sampling:生成確率にもとづいてtoken をランダムに選ぶ.
+3. Embedding:2で選ばれたtoken をEmbedding してDecoder RNN への次の入力とする.
+4. Detokenize:1 -3 を繰り返し、2で得られたtoken を文字列に直す.
 ## HRED
-
+HRED: Seq2Seq + Context RNN  
+Context RNN: Encoder のまとめた各文章の系列をまとめて、これまでの会話コンテキスト全体を表すベクトルに変換する構造.
+### HREDの課題
+* 確率的な多様性が字面にしかなく、会話の「流れ」のような多様性が無い.
+* 短く情報量に乏しい答えを頻繁にする.
 ## VHRED
+HREDにVAEの潜在変数の概念を追加したもの.HREDの課題を、VAEの潜在変数の概念を追加することで解決した.
+
 
 ## オートエンコーダ―
+教師なし学習の一つ.入力データから潜在変数zに変換するニューラルネットワークをEncoder逆に潜在変数zをインプットとして元画像を復元するニューラルネットワークをDecoderとする.
+
+![1](images_Deeplearning_Latter/3_5_6.png) 
 ## VAE
+通常のオートエンコーダーの場合、何かしら潜在変数zにデータを押し込めているものの、その構造がどのような状態かわからない.VAEはこの潜在変数zに確率分布z∼N(0,1)を仮定したもの.
+
+![1](images_Deeplearning_Latter/3_5_7.png) 
 # 3-6.Word2vec
 分布仮説から単語を固定長のベクトル化(単語分散表現ベクトル)する手法.学習データからボキャブラリーを作成し、各単語をone-hotベクトルにして入力して単語分散表現を得る.
 
@@ -108,6 +141,7 @@ Seq2Seqは文章の単語数に関わらず常に固定次元ベクトルで入�
 
 確認テスト  
 RNNとword2vec、seq2seqとAttentionの違いを簡潔に述べよ。  
+
 RNN：時系列データを処理するのに適したネットワーク  
 word2vec：単語の分散表現ベクトルを得る手法  
 seq2seq：一つの時系列データから別の時系列データを得るネットワーク  
